@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+	<title>XYZ College</title>
+	<link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+</head>
+
+<body background="img.png" background-size="cover">
+<div class="header">
+
+
+  <div class="mid_header">
+
+<div class="logo">
+<h1>XYZ   COLLEGE </h1>
+</div>
+<!-- <div class="inner_header">
+          <ul>
+         <a href="home.html"><li>Home</li></a>
+
+      </ul>
+</div> -->
+
+
+</div></div>
+
+
+<div class="box">
+
+
+<h2>LOGIN</h2>
+<form action="{{ url_for('result')}}" method="POST">
+<div class="ipbox">
+	<label>ID</label>
+	<br>
+<input type="text" name="email" style="width:500px" required autocomplete="off">
+<br>
+</div>
+<br>
+<div class="ipbox">
+	<br>
+	<label>PASSWORD</label>
+	<br>
+<input type="password" name="password" style="width:500px" required>
+<br>
+</div>
+<br>
+<br>
+<center>
+<button type="submit" class="btn btn-primary btn-block btn-large" style="width:500px">Submit</button>
+</center>
+</form>
+<br>
+<br>
+{{a}}
+
+   <!-- <center> <div class="psw">
+      <a href="register1.php">NEW REGISTRATION ?</a>
+    </div></center> -->
+  </div>
+
+</div>
+
+</body>
+<html>

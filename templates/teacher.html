@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+      <h1>Overview</h1>
+      Total Reviews {{bc1+bc2}} ||
+      Positive Reviews {{bc1}} ||
+      Negative Reviews {{bc2}}
+      <br><br>
+
+
+        <img src="/plot.png" alt="bar Graph" >
+        <br>
+        <br>
+
+        You have {{bc1/(bc1+bc2)*100}}% positive Reviews
+        <br>
+        <br>
+        <img src="/katapa" alt="pie Chart" >
+        <br><br>
+      <center>
+      <a href="{{url_for('abcd')}}" style="text-decoration:none">
+        <button class="btn btn-primary btn-block btn-large" style="width:500px">Logout</button>
+      </a>
+    </center>
+
+
+
+  </body>
+
+</html>

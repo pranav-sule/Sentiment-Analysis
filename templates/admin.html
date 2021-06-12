@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+
+    <h1>ADMIN</h1>
+    <center>   <table border="2" cellspacing="5" style="color:#ffe0dd;background-color:#203647">
+      <tr>
+    <th>ID</th>
+    <th>Teacher ID</th>
+    <th>Name of teacher</th>
+    <th>Analysed Sentiment</th>
+    <th>Review</th>
+  </tr>
+    {% for tr in admin_data%}
+       <tr>
+       {% for td in tr%}
+         <td style="text-align:center">{{td}}</td>
+        {% endfor%}
+      </tr>
+    {% endfor %}
+    </table></center>
+<br><br>
+<center>
+<a href="{{url_for('abcd')}}" style="text-decoration:none">
+  <button class="btn btn-primary btn-block btn-large" style="width:500px">Logout</button>
+</a>
+</center>
+  </body>
+</html>

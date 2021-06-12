@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- <link rel="stylesheet" href="student.css" -->
+
+</head>
+
+<body>
+
+ <div class="login">
+	<h3>Give your feedback for the following teachers</h3>
+    <form action="{{ url_for('predict')}}"  method="post">
+      <input type="hidden" id="slider_input" name="ID" value={{name}} />
+      Anita Chaudhari
+      <input  type="text" name="anita" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Jessica Dias
+      <input  type="text" name="jessica" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Ahmer Usmani
+      <input  type="text" name="ahmer" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Vivek Solwande
+      <input  type="text" name="vivek" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Jacob John
+      <input  type="text" name="jacob" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Joyce Dsouza
+      <input  type="text" name="joyce" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Shraddha More
+      <input  type="text" name="shraddha" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br>
+      Linda John
+      <input  type="text" name="linda" placeholder="Feedback" required="required" autocomplete="off"/>
+      <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        <br>
+        <br>
+    </form>
+
+   <br>
+   <br>
+
+ </div>
+
+
+</body>
+</html>

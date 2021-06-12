@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+
+
+    <h1>You have filled the form.</h1>
+    <center>   <table  border="1"  style="color:#ffe0dd;background-color:#203647">
+      <caption> <h3>Your Submitted Reviews </h3> </caption>
+      <tr>
+    <th>Teacher Name</th>
+    <th>Your Review</th>
+  </tr>
+    {% for tr in r%}
+       <tr>
+        {% set x=[tr[2],tr[4]] %}
+       {% for td in x%}
+         <td style="text-align:left">{{td}}</td>
+        {% endfor%}
+      </tr>
+    {% endfor %}
+    </table></center>
+
+    <br><br><br>
+
+    <!-- <form action="{{ url_for('abcd')}}" method="post">
+      <button type="submit" class="btn btn-primary btn-block btn-large"> Logout</button>
+    </form> -->
+    <a href="{{url_for('abcd')}}" style="text-decoration:none"><button class="btn btn-primary btn-block btn-large">Logout</button></a>
+
+
+   <br>
+   <br>
+
+   <!-- {{ prediction_text }} -->
+
+ </div>
+
+
+</body>
+</html>
